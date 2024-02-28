@@ -30,7 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;      padding-top: 20px;
+  margin: 0;
+  padding-top: 70px;
   padding-bottom: 250px;
   text-align: center;
   height: 70vh;
@@ -52,6 +53,24 @@
 }
 
 .h3_title {
-    margin-top: 20px;
-    font-size: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+.search_box {
+  width: 70%;
+  height: 60px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.search_button{
+  width: 75px;
+  height: 60px;
+  border-radius: 24px;
+}
+
+.search_button:hover{
+  background-color: #f3e4d8;
 }
