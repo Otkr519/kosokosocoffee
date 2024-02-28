@@ -18,3 +18,39 @@
 .nav-item:hover:before {
 	transform: scale(1);
 }
+
+.top{
+  width: 100%;
+  background-image: url(backimages.jpg);
+  background-size: cover;
+  background-position: center;
+  }
+
+.top_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;      padding-top: 20px;
+  padding-bottom: 250px;
+  text-align: center;
+  height: 70vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.h1_title , .h3_title{
+  color: #ffffff;
+  text-shadow: 10px 10px 10px #4b2c14;
+}
+
+.h1_title {
+  font-weight: bold;
+  font-style: normal;
+  padding: 20px;
+}
+
+.h3_title {
+    margin-top: 20px;
+    font-size: 20px;
+}
