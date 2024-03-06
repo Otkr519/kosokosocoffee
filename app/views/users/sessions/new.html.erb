@@ -1,0 +1,32 @@
+<body class="text-center">
+  <form class="form-signin">
+    <img class="mb-4" src="/assets/home.jpg" alt="home画像" >
+    <h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="mb-3">
+        <%= f.label :email, class: "visually-hidden" %>
+        <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :password, class: "visually-hidden" %>
+        <%= f.password_field :password, id: "pass", class: "form-control", placeholder: "パスワード", autocomplete: "current-password" %>
+        <div class="mb-3">
+          <input type="checkbox" class= "form-check-input" onChange="document.getElementById('pass').type = (this.checked) ? 'text' : 'password';">
+          <label class="form-check-label" for="showPassword">パスワードを表示</label>
+        </div>
+      </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="mb-3">
+          <%= f.check_box :remember_me, class: "form-check-input" %>
+          <%= f.label :ログインを記録, class: "form-check-label" %>
+        </div>
+      <% end %>
+      <div class="d-grid gap-2 col-6 mx-auto mb-3">
+        <%= f.submit "ログインする", class: "btn btn-success" %>
+      </div>
+    <% end %>
+    <%= link_to '/users/sign_up', class: "btn btn-outline-secondary" do %>
+      アカウント新規登録
+    <% end %>
+  </form>
+</body>
